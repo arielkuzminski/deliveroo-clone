@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "dish",
   "info": {
     "name": "dish",
     "description": ""
@@ -30,8 +30,9 @@
       "type": "decimal"
     },
     "restaurant": {
-      "model": "restaurant",
-      "via": "dishes"
+      "collection": "restaurant",
+      "via": "dishes",
+      "dominant": true
     }
   }
 }

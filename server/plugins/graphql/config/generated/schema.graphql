@@ -75,7 +75,7 @@ type Dish {
   description: String
   image: UploadFile
   price: Float
-  restaurant: Restaurant
+  restaurant(sort: String, limit: Int, start: Int, where: JSON): [Restaurant]
 }
 
 input DishInput {
@@ -83,7 +83,7 @@ input DishInput {
   description: String
   image: ID
   price: Float
-  restaurant: ID
+  restaurant: [ID]
 }
 
 input editDishInput {
@@ -91,7 +91,7 @@ input editDishInput {
   description: String
   image: ID
   price: Float
-  restaurant: ID
+  restaurant: [ID]
 }
 
 input editFileInput {
