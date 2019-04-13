@@ -40,8 +40,13 @@ module.exports = {
   */
   modules: [,
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/markdownit',
   ],
+
+  markdownit: {
+    injected: true,
+  },
 
   /*
   ** Build configuration
@@ -51,7 +56,7 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
   }
 }
